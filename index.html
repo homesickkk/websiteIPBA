@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Buttons on Background</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://media.discordapp.net/attachments/959783725275701288/1317108539814313994/Group_4_20241213_203721_0000.png?ex=675e252a&is=675cd3aa&hm=71af681b6cffa3321d80b8d09e7b41a1a0f91ca61c53be84edb1427bdaa8c033&=&format=webp&quality=lossless&width=2205&height=1239');
+            background-size: contain; /* Fit the entire image */
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh; /* Full-screen height */
+            width: 100vw; /* Full-screen width */
+            position: relative; /* Allows positioning of buttons */
+            font-family: sans-serif; /* Ensures the whole page uses sans-serif */
+        }
+        .button {
+            position: absolute; /* Enables exact placement */
+            background-color: transparent; /* Transparent background */
+            color: #ca9ab0; /* Text color set to #ca9ab0 */
+            font-weight: bold; /* Makes the text bold */
+            font-family: sans-serif; /* Sets the button font to sans-serif */
+            border: 2px solid transparent; /* Transparent border */
+            padding: 5px 10px; /* Button size */
+            cursor: pointer;
+            font-size: 14px; /* Smaller text size */
+            transition: color 0.3s, border-color 0.3s;
+            border-radius: 20px; /* Rounded corners */
+        }
+        .button:hover {
+            color: #ca9ab0; /* Change text color to pink on hover */
+            border-color: #ca9ab0; /* Highlight button on hover */
+        }
+        /* Adjust button positions */
+        .button1 {
+            top: 52%; /* Adjust to match image layout */
+            left: 35%;
+        }
+        .button2 {
+            top: 64%;
+            left: 35%;
+        }
+        .button3 {
+            top: 76%;
+            left: 35%;
+        }
+        .button4 {
+            top: 88%;
+            left: 35%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Buttons placed over the background -->
+    <button class="button button1" onclick="navigateTo('page1.html')">Quarter 1</button>
+<button class="button button2" onclick="navigateTo('page2.html')">Quarter 2</button>
+<button class="button button3" onclick="navigateTo('page3.html')">Quarter 3</button>
+<button class="button button4" onclick="navigateTo('page4.html')">Quarter 4</button>
+
+    <script>
+        function navigateTo(url) {
+            window.location.href = url; // Navigate to the specified URL
+        }
+    </script>
+</body>
+</html>
